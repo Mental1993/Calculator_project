@@ -157,16 +157,41 @@ public class mainForm extends javax.swing.JFrame {
         jButton26.setLabel("/");
 
         jButton27.setLabel("=");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
         jButton28.setLabel("%");
 
         jButton29.setLabel("log");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
 
         jButton30.setLabel("Sqrt");
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
 
         jButton31.setLabel("x^2");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
 
         jButton32.setLabel("x^y");
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
 
         jButton33.setLabel("C");
         jButton33.addActionListener(new java.awt.event.ActionListener() {
@@ -403,6 +428,47 @@ public class mainForm extends javax.swing.JFrame {
         firstnum=0;
         secondnum=0;
     }//GEN-LAST:event_jButton33ActionPerformed
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        firstnum = Double.parseDouble(jTextField1.getText());
+        jTextField1.setText("");
+        operations="^";   
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        String answer;
+        secondnum = Double.parseDouble(jTextField1.getText());   
+        if (operations == "^")
+        {
+            result = Math.pow(firstnum , secondnum);
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+        }   
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        firstnum = Double.parseDouble(jTextField1.getText());
+        String answer;
+        result=Math.pow(firstnum,2);
+        answer = String.valueOf(result);
+        jTextField1.setText(answer);
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        firstnum = Double.parseDouble(jTextField1.getText());
+        String answer;
+        result=Math.sqrt(firstnum);
+        answer = String.valueOf(result);
+        jTextField1.setText(answer);
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        firstnum = Double.parseDouble(jTextField1.getText());
+        String answer;
+        result=Math.log10(firstnum);
+        answer = String.valueOf(result);
+        jTextField1.setText(answer);
+    }//GEN-LAST:event_jButton29ActionPerformed
 
     /**
      * @param args the command line arguments
