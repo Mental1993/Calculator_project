@@ -11,6 +11,7 @@ package calculator;
  */
 public class mainForm extends javax.swing.JFrame {
     
+    int i;
     double firstnum;
     double secondnum;
     double result;
