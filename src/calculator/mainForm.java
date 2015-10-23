@@ -135,8 +135,18 @@ public class mainForm extends javax.swing.JFrame {
         });
 
         jButton21.setLabel(",");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
 
         jButton22.setLabel("+/-");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
 
         jButton23.setLabel("+");
 
@@ -159,8 +169,18 @@ public class mainForm extends javax.swing.JFrame {
         jButton32.setLabel("x^y");
 
         jButton33.setLabel("C");
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton33ActionPerformed(evt);
+            }
+        });
 
         jButton34.setLabel("<--");
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton34ActionPerformed(evt);
+            }
+        });
 
         jMenuProvoli.setText("Προβολή");
 
@@ -355,6 +375,34 @@ public class mainForm extends javax.swing.JFrame {
     private void jMenuHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuHelpActionPerformed
         new Help().setVisible(true);
     }//GEN-LAST:event_jMenuHelpActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+    jTextField1.setText(String.valueOf(Double.parseDouble(jTextField1.getText())*-1));
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        jTextField1.setText(jTextField1.getText()+".");
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
+        if(jTextField1.getText().length()==0)
+          {
+              
+          }else
+          {
+            
+            String s = jTextField1.getText();
+            s = s.substring(0, s.length() - 1);
+            jTextField1.setText(s);
+          }
+    }//GEN-LAST:event_jButton34ActionPerformed
+
+    private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
+        result = 0;
+        jTextField1.setText("");
+        firstnum=0;
+        secondnum=0;
+    }//GEN-LAST:event_jButton33ActionPerformed
 
     /**
      * @param args the command line arguments
