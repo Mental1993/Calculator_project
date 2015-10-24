@@ -11,7 +11,7 @@ package calculator;
  */
 public class mainForm extends javax.swing.JFrame {
     
-    
+    public int commaClick;
     public double firstnum;
     public double secondnum;
     public double result;
@@ -432,7 +432,11 @@ public class mainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        jTextField1.setText(jTextField1.getText()+".");
+        if(commaClick==0)
+        {
+            jTextField1.setText(jTextField1.getText()+".");
+            commaClick=1;
+        }
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
@@ -453,12 +457,14 @@ public class mainForm extends javax.swing.JFrame {
         jTextField1.setText("");
         firstnum=0;
         secondnum=0;
+        commaClick=0;
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
         firstnum = Double.parseDouble(jTextField1.getText());
         jTextField1.setText("");
         operations="^";   
+        commaClick=0;
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButtonEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualsActionPerformed
@@ -473,19 +479,19 @@ public class mainForm extends javax.swing.JFrame {
         if (operations == "+")
         {
             result = firstnum + secondnum;
-            answer = String.format("%.0f",result);
+            answer = String.valueOf(result);
             jTextField1.setText(answer);
         }
         if (operations == "-")
         {
             result = firstnum - secondnum;
-            answer = String.format("%.0f",result);
+            answer = String.valueOf(result);
             jTextField1.setText(answer);
         }
         if (operations == "*")
         {
             result = firstnum * secondnum;
-            answer = String.format("%.0f",result);
+            answer = String.valueOf(result);
             jTextField1.setText(answer);
         }
         if (operations == "/")
@@ -497,7 +503,7 @@ public class mainForm extends javax.swing.JFrame {
         if (operations == "%")
         {
             result = firstnum / secondnum;
-            answer = String.format("%.0f",result);
+            answer = String.valueOf(result);
             jTextField1.setText(answer);
         }       
     }//GEN-LAST:event_jButtonEqualsActionPerformed
@@ -530,24 +536,28 @@ public class mainForm extends javax.swing.JFrame {
         firstnum = Double.parseDouble(jTextField1.getText());
         jTextField1.setText("");
         operations="+";
+        commaClick=0;
     }//GEN-LAST:event_jButtonAddActionPerformed
 
     private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
         firstnum = Double.parseDouble(jTextField1.getText());
         jTextField1.setText("");
         operations="-";
+        commaClick=0;
     }//GEN-LAST:event_jButtonSubActionPerformed
 
     private void jButtonMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultActionPerformed
         firstnum = Double.parseDouble(jTextField1.getText());
         jTextField1.setText("");
         operations="*";
+        commaClick=0;
     }//GEN-LAST:event_jButtonMultActionPerformed
 
     private void jButtonDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivActionPerformed
         firstnum = Double.parseDouble(jTextField1.getText());
         jTextField1.setText("");
         operations="/";
+        commaClick=0;
     }//GEN-LAST:event_jButtonDivActionPerformed
 
     private void jButtonModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModActionPerformed
