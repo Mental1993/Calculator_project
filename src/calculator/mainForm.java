@@ -367,7 +367,18 @@ public class mainForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    public boolean checkEmpty()
+    {
+        if(jTextField1.getText().length()==0)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+    
     private void jButtonnum0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonnum0ActionPerformed
         String Enternumber = jTextField1.getText() + jButtonnum0.getText();
         jTextField1.setText(Enternumber);
@@ -428,7 +439,12 @@ public class mainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuHelpActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-    jTextField1.setText(String.valueOf(Double.parseDouble(jTextField1.getText())*-1));
+        if(checkEmpty())
+        {
+            
+        }else {
+            jTextField1.setText(String.valueOf(Double.parseDouble(jTextField1.getText())*-1));
+        }
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
@@ -461,109 +477,159 @@ public class mainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="^";   
-        commaClick=0;
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="^";   
+            commaClick=0;
+        }
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButtonEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualsActionPerformed
-        String answer;
-        secondnum = Double.parseDouble(jTextField1.getText());   
-        if (operations == "^")
+        if(checkEmpty())
         {
-            result = Math.pow(firstnum , secondnum);
-            answer = String.valueOf(result);
-            jTextField1.setText(answer);
-        }   
-        if (operations == "+")
-        {
-            result = firstnum + secondnum;
-            answer = String.valueOf(result);
-            jTextField1.setText(answer);
+            
+        }else {
+            String answer;
+            secondnum = Double.parseDouble(jTextField1.getText());   
+            if (operations == "^")
+            {
+             result = Math.pow(firstnum , secondnum);
+             answer = String.valueOf(result);
+                jTextField1.setText(answer);
+            }   
+            if (operations == "+")
+            {
+                result = firstnum + secondnum;
+                answer = String.valueOf(result);
+                jTextField1.setText(answer);
+            }
+            if (operations == "-")
+            {
+               result = firstnum - secondnum;
+                answer = String.valueOf(result);
+                jTextField1.setText(answer);
+            }
+            if (operations == "*")
+            {
+                result = firstnum * secondnum;
+                answer = String.valueOf(result);
+                jTextField1.setText(answer);
+            }
+            if (operations == "/")
+            {
+                result = firstnum / secondnum;
+                answer = String.valueOf(result);
+                jTextField1.setText(answer);
+            }
+            if (operations == "%")
+            {
+                result = firstnum / secondnum;
+                answer = String.valueOf(result);
+                jTextField1.setText(answer);
+            }    
         }
-        if (operations == "-")
-        {
-            result = firstnum - secondnum;
-            answer = String.valueOf(result);
-            jTextField1.setText(answer);
-        }
-        if (operations == "*")
-        {
-            result = firstnum * secondnum;
-            answer = String.valueOf(result);
-            jTextField1.setText(answer);
-        }
-        if (operations == "/")
-        {
-            result = firstnum / secondnum;
-            answer = String.valueOf(result);
-            jTextField1.setText(answer);
-        }
-        if (operations == "%")
-        {
-            result = firstnum / secondnum;
-            answer = String.valueOf(result);
-            jTextField1.setText(answer);
-        }       
     }//GEN-LAST:event_jButtonEqualsActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        String answer;
-        result=Math.pow(firstnum,2);
-        answer = String.valueOf(result);
-        jTextField1.setText(answer);
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer;
+            result=Math.pow(firstnum,2);
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+            }
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        String answer;
-        result=Math.sqrt(firstnum);
-        answer = String.valueOf(result);
-        jTextField1.setText(answer);
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer;
+            result=Math.sqrt(firstnum);
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+        }
     }//GEN-LAST:event_jButton30ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        String answer;
-        result=Math.log10(firstnum);
-        answer = String.valueOf(result);
-        jTextField1.setText(answer);
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer;
+            result=Math.log10(firstnum);
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+        }
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="+";
-        commaClick=0;
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="+";
+            commaClick=0;
+        }
     }//GEN-LAST:event_jButtonAddActionPerformed
 
     private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="-";
-        commaClick=0;
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="-";
+            commaClick=0;
+        }
     }//GEN-LAST:event_jButtonSubActionPerformed
 
     private void jButtonMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="*";
-        commaClick=0;
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="*";
+            commaClick=0;
+        }
     }//GEN-LAST:event_jButtonMultActionPerformed
 
     private void jButtonDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="/";
-        commaClick=0;
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="/";
+            commaClick=0;
+        }
     }//GEN-LAST:event_jButtonDivActionPerformed
 
     private void jButtonModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="%";
+        if(checkEmpty())
+        {
+            
+        }else {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="%";
+        }
     }//GEN-LAST:event_jButtonModActionPerformed
 
     /**
