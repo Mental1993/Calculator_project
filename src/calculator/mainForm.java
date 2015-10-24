@@ -11,11 +11,11 @@ package calculator;
  */
 public class mainForm extends javax.swing.JFrame {
     
-    int i;
-    double firstnum;
-    double secondnum;
-    double result;
-    String operations;
+    
+    public double firstnum;
+    public double secondnum;
+    public double result;
+    public String operations;
 
     public mainForm() {
         initComponents();
