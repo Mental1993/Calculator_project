@@ -11,6 +11,7 @@ package calculator;
  */
 public class mainForm extends javax.swing.JFrame {
     
+    public String copy;
     public int commaClick;
     public double firstnum;
     public double secondnum;
@@ -58,6 +59,9 @@ public class mainForm extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuProvoli = new javax.swing.JMenu();
         jMenuExit = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuBoitheia = new javax.swing.JMenu();
         jMenuHelp = new javax.swing.JMenuItem();
 
@@ -244,6 +248,26 @@ public class mainForm extends javax.swing.JFrame {
         jMenuProvoli.add(jMenuExit);
 
         jMenuBar1.add(jMenuProvoli);
+
+        jMenu1.setText("Επεξεργασία");
+
+        jMenuItem1.setText("Αντιγραφή");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Επικόλληση");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
 
         jMenuBoitheia.setText("Βοήθεια");
 
@@ -450,8 +474,12 @@ public class mainForm extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         if(commaClick==0)
         {
-            jTextField1.setText(jTextField1.getText()+".");
+            
             commaClick=1;
+            if(checkEmpty())
+            {
+                jTextField1.setText("0.");
+            }
         }
     }//GEN-LAST:event_jButton21ActionPerformed
 
@@ -497,8 +525,8 @@ public class mainForm extends javax.swing.JFrame {
             secondnum = Double.parseDouble(jTextField1.getText());   
             if (operations == "^")
             {
-             result = Math.pow(firstnum , secondnum);
-             answer = String.valueOf(result);
+                result = Math.pow(firstnum , secondnum);
+                answer = String.valueOf(result);            
                 jTextField1.setText(answer);
             }   
             if (operations == "+")
@@ -632,6 +660,15 @@ public class mainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonModActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        
+        jTextField1.setText(copy);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        copy=jTextField1.getText();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -692,10 +729,13 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JButton jButtonnum7;
     private javax.swing.JButton jButtonnum8;
     private javax.swing.JButton jButtonnum9;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuBoitheia;
     private javax.swing.JMenuItem jMenuExit;
     private javax.swing.JMenuItem jMenuHelp;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu jMenuProvoli;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
