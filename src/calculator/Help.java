@@ -30,12 +30,12 @@ public class Help extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("ΧΡΗΣΗ ΤΗΣ ΑΡΙΘΜΟΜΗΧΑΝΗΣ:\nΜπορείτε να χρησιμοποιήσετε την Αριθμομηχανή για να εκτελέσετε απλές πράξεις, όπως πρόσθεση, αφαίρεση, πολλαπλασιασμό και διαίρεση. Επίσης, η Αριθμομηχανή προσφέρει τις προηγμένες δυνατότητες αριθμομηχανής προγραμματισμού, επιστημονικών και στατιστικών αριθμομηχανών.\nΜπορείτε να εκτελέσετε υπολογισμούς κάνοντας κλικ στα πλήκτρα της Αριθμομηχανής.Για περισσότερες πληροφορίες σχετικά με τη χρήση του πληκτρολογίου με την Αριθμομηχανή, ανατρέξτε στο θέμα Συντομεύσεις πληκτρολογίου.\n\nΒΑΣΙΚΑ ΒΗΜΑΤΑ ΕΚΤΕΛΕΣΗΣ:\n\nΚάντε κλικ για να ανοίξετε την \"Αριθμομηχανή\".\n\nΚάντε κλικ στο μενού Προβολή και μετά κάντε κλικ στη λειτουργία που θέλετε.\n\nΚάντε κλικ στα πλήκτρα της αριθμομηχανής για να κάνετε τον υπολογισμό που θέλετε.\n");
+        jTextArea1.setText("ΧΡΗΣΗ ΤΗΣ ΑΡΙΘΜΟΜΗΧΑΝΗΣ:\n\nΜπορείτε να χρησιμοποιήσετε την Αριθμομηχανή για να εκτελέσετε απλές πράξεις, όπως πρόσθεση, αφαίρεση, πολλαπλασιασμό και διαίρεση. \nΕπίσης, η Αριθμομηχανή προσφέρει τις προηγμένες δυνατότητες αριθμομηχανής προγραμματισμού, επιστημονικών και στατιστικών αριθμομηχανών.\nΜπορείτε να εκτελέσετε υπολογισμούς κάνοντας κλικ στα πλήκτρα της Αριθμομηχανής.\nΓια περισσότερες πληροφορίες σχετικά με τη χρήση του πληκτρολογίου με την Αριθμομηχανή, ανατρέξτε στο θέμα Συντομεύσεις πληκτρολογίου.\n\nΒΑΣΙΚΑ ΒΗΜΑΤΑ ΕΚΤΕΛΕΣΗΣ:\n\nΚάντε κλικ για να ανοίξετε την \"Αριθμομηχανή\".\n\nΚάντε κλικ στο μενού Προβολή και μετά κάντε κλικ στη λειτουργία που θέλετε.\n\nΚάντε κλικ στα πλήκτρα της αριθμομηχανής για να κάνετε τον υπολογισμό που θέλετε.\n");
         jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jScrollPane1.setViewportView(jTextArea1);
 
@@ -43,13 +43,15 @@ public class Help extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 798, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 74, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
