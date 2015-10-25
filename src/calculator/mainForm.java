@@ -474,12 +474,8 @@ public class mainForm extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         if(commaClick==0)
         {
-            
             commaClick=1;
-            if(checkEmpty())
-            {
-                jTextField1.setText("0.");
-            }
+            jTextField1.setText(jTextField1.getText()+".");
         }
     }//GEN-LAST:event_jButton21ActionPerformed
 
