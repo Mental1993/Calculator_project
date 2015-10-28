@@ -65,6 +65,8 @@ public class epistimoniki extends javax.swing.JFrame {
         jButton31 = new javax.swing.JButton();
         jButton32 = new javax.swing.JButton();
         jButton33 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
+        jButton35 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -205,6 +207,10 @@ public class epistimoniki extends javax.swing.JFrame {
 
         jButton33.setText("e");
 
+        jButton34.setText("jButton34");
+
+        jButton35.setText("jButton35");
+
         jMenu1.setText("Προβολή");
 
         jMenuItem1.setText("Τυπική");
@@ -326,11 +332,21 @@ public class epistimoniki extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(119, 119, 119))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jButton34)
+                .addGap(45, 45, 45)
+                .addComponent(jButton35)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(83, 83, 83)
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton34)
+                    .addComponent(jButton35))
+                .addGap(36, 36, 36)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -525,6 +541,8 @@ public class epistimoniki extends javax.swing.JFrame {
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
