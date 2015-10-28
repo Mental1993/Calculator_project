@@ -56,6 +56,7 @@ public class mainForm extends javax.swing.JFrame {
         jButton34 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuProvoli = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuExit = new javax.swing.JMenuItem();
         jMenuBoitheia = new javax.swing.JMenu();
         jMenuHelp = new javax.swing.JMenuItem();
@@ -63,6 +64,11 @@ public class mainForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextField1.setEditable(false);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jButtonnum0.setLabel("0");
         jButtonnum0.addActionListener(new java.awt.event.ActionListener() {
@@ -164,6 +170,14 @@ public class mainForm extends javax.swing.JFrame {
 
         jMenuProvoli.setText("Προβολή");
 
+        jMenuItem1.setText("Επιστημονική");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenuProvoli.add(jMenuItem1);
+
         jMenuExit.setText("Έξοδος");
         jMenuExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,7 +271,7 @@ public class mainForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -356,6 +370,14 @@ public class mainForm extends javax.swing.JFrame {
         new Help().setVisible(true);
     }//GEN-LAST:event_jMenuHelpActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+         new epistimoniki().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -420,6 +442,7 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuBoitheia;
     private javax.swing.JMenuItem jMenuExit;
     private javax.swing.JMenuItem jMenuHelp;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu jMenuProvoli;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
