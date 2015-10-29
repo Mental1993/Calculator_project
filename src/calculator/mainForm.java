@@ -56,6 +56,7 @@ public class mainForm extends javax.swing.JFrame {
         jButton32 = new javax.swing.JButton();
         jButton33 = new javax.swing.JButton();
         jButton34 = new javax.swing.JButton();
+        jTextFieldMem = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuProvoli = new javax.swing.JMenu();
         jMenuExit = new javax.swing.JMenuItem();
@@ -353,13 +354,16 @@ public class mainForm extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jTextField1))
+                    .addComponent(jTextField1)
+                    .addComponent(jTextFieldMem))
                 .addContainerGap(119, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(83, 83, 83)
+                .addGap(52, 52, 52)
+                .addComponent(jTextFieldMem, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -518,6 +522,7 @@ public class mainForm extends javax.swing.JFrame {
             jTextField1.setText("");
             operations="^";   
             commaClick=0;
+            jTextFieldMem.setText(String.valueOf(firstnum + "^"));
         }
     }//GEN-LAST:event_jButton32ActionPerformed
 
@@ -533,36 +538,42 @@ public class mainForm extends javax.swing.JFrame {
                 result = Math.pow(firstnum , secondnum);
                 answer = String.valueOf(result);            
                 jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "^" + secondnum));
             }   
             if (operations == "+")
             {
                 result = firstnum + secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "+" + secondnum));
             }
             if (operations == "-")
             {
                result = firstnum - secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "-" + secondnum));
             }
             if (operations == "*")
             {
                 result = firstnum * secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "*" + secondnum));
             }
             if (operations == "/")
             {
                 result = firstnum / secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "/" + secondnum));
             }
             if (operations == "%")
             {
                 result = firstnum / secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "%" + secondnum));
             }    
         }
     }//GEN-LAST:event_jButtonEqualsActionPerformed
@@ -577,6 +588,7 @@ public class mainForm extends javax.swing.JFrame {
             result=Math.pow(firstnum,2);
             answer = String.valueOf(result);
             jTextField1.setText(answer);
+            jTextFieldMem.setText(String.valueOf(firstnum + "^" + "2"));
             }
     }//GEN-LAST:event_jButton31ActionPerformed
 
@@ -590,6 +602,7 @@ public class mainForm extends javax.swing.JFrame {
             result=Math.sqrt(firstnum);
             answer = String.valueOf(result);
             jTextField1.setText(answer);
+            jTextFieldMem.setText(String.valueOf("sqrt " + firstnum ));
         }
     }//GEN-LAST:event_jButton30ActionPerformed
 
@@ -603,6 +616,7 @@ public class mainForm extends javax.swing.JFrame {
             result=Math.log10(firstnum);
             answer = String.valueOf(result);
             jTextField1.setText(answer);
+            jTextFieldMem.setText(String.valueOf("log " + firstnum));
         }
     }//GEN-LAST:event_jButton29ActionPerformed
 
@@ -615,6 +629,7 @@ public class mainForm extends javax.swing.JFrame {
             jTextField1.setText("");
             operations="+";
             commaClick=0;
+            jTextFieldMem.setText(String.valueOf(firstnum + "+" ));
         }
     }//GEN-LAST:event_jButtonAddActionPerformed
 
@@ -627,6 +642,7 @@ public class mainForm extends javax.swing.JFrame {
             jTextField1.setText("");
             operations="-";
             commaClick=0;
+            jTextFieldMem.setText(String.valueOf(firstnum + "-" ));
         }
     }//GEN-LAST:event_jButtonSubActionPerformed
 
@@ -639,6 +655,7 @@ public class mainForm extends javax.swing.JFrame {
             jTextField1.setText("");
             operations="*";
             commaClick=0;
+            jTextFieldMem.setText(String.valueOf(firstnum + "*" ));
         }
     }//GEN-LAST:event_jButtonMultActionPerformed
 
@@ -651,6 +668,7 @@ public class mainForm extends javax.swing.JFrame {
             jTextField1.setText("");
             operations="/";
             commaClick=0;
+            jTextFieldMem.setText(String.valueOf(firstnum + "/" ));
         }
     }//GEN-LAST:event_jButtonDivActionPerformed
 
@@ -662,6 +680,7 @@ public class mainForm extends javax.swing.JFrame {
             firstnum = Double.parseDouble(jTextField1.getText());
             jTextField1.setText("");
             operations="%";
+            jTextFieldMem.setText(String.valueOf(firstnum + "%" ));
         }
     }//GEN-LAST:event_jButtonModActionPerformed
 
@@ -749,5 +768,6 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu jMenuProvoli;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldMem;
     // End of variables declaration//GEN-END:variables
 }
