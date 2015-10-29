@@ -59,6 +59,7 @@ public class mainForm extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuProvoli = new javax.swing.JMenu();
         jMenuExit = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -246,6 +247,14 @@ public class mainForm extends javax.swing.JFrame {
             }
         });
         jMenuProvoli.add(jMenuExit);
+
+        jMenuItem3.setText("Επιστημονική");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenuProvoli.add(jMenuItem3);
 
         jMenuBar1.add(jMenuProvoli);
 
@@ -665,6 +674,11 @@ public class mainForm extends javax.swing.JFrame {
         copy=jTextField1.getText();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new epistimoniki().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -732,6 +746,7 @@ public class mainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuHelp;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenu jMenuProvoli;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
