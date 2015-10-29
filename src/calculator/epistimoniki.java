@@ -181,10 +181,25 @@ public class epistimoniki extends javax.swing.JFrame {
         jTextField1.setEditable(false);
 
         jButton25.setText("cos");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
 
         jButton26.setText("sin");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
 
         jButton27.setText("tan");
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton27ActionPerformed(evt);
+            }
+        });
 
         jButton28.setText("pi");
         jButton28.addActionListener(new java.awt.event.ActionListener() {
@@ -465,6 +480,51 @@ public class epistimoniki extends javax.swing.JFrame {
        
        
     }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        firstnum = Double.parseDouble(jTextField1.getText());
+        String answer;
+        if(firstnum==90 || firstnum==270) 
+            jTextField1.setText("ERROR");
+        
+        else if(firstnum==180 || firstnum==360 || firstnum==45){
+            result=Math.tan(Math.toRadians(firstnum));
+            result=Math.round(result);
+        }
+        
+        else
+            result=Math.tan(Math.toRadians(firstnum));
+        
+        answer = String.valueOf(result);
+        jTextField1.setText(answer);
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer; 
+            if(firstnum==180 || firstnum==360){
+                 result=Math.sin(Math.toRadians(firstnum));
+                 result=Math.round(result);
+            }
+            else
+                 result=Math.sin(Math.toRadians(firstnum));
+           
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer; 
+            if(firstnum==90 || firstnum==270){
+                 result=Math.cos(Math.toRadians(firstnum));
+                 result=Math.round(result);
+            }
+            else
+                 result=Math.cos(Math.toRadians(firstnum));
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+    }//GEN-LAST:event_jButton25ActionPerformed
 
     /**
      * @param args the command line arguments
