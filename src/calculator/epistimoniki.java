@@ -509,10 +509,16 @@ public class epistimoniki extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        jTextField1.setText("");
-        operations="+";
-        jTextFieldMem.setText(String.valueOf(firstnum + "+" ));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="+";
+            jTextFieldMem.setText(String.valueOf(firstnum + "+" ));
+        }
     }//GEN-LAST:event_jButtonAddActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -585,37 +591,53 @@ public class epistimoniki extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        String answer;
-        result=Math.log(firstnum);
-        answer = String.valueOf(result);
-        jTextField1.setText(answer);
-        jTextFieldMem.setText(String.valueOf("ln " + firstnum));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer;
+            result=Math.log(firstnum);
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+            jTextFieldMem.setText(String.valueOf("ln " + firstnum));
+        }
        
        
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-        firstnum = Double.parseDouble(jTextField1.getText());
-        String answer;
-        if(firstnum==90 || firstnum==270) 
-            jTextField1.setText("ERROR");
-        
-        
-        else if(firstnum==180 || firstnum==360 || firstnum==45){
-            result=Math.tan(Math.toRadians(firstnum));
-            result=Math.round(result);
+        if(checkEmpty())
+        {
+            
+        }else 
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer;
+            if(firstnum==90 || firstnum==270) 
+            {
+                jTextField1.setText("ERROR");
+            }else if(firstnum==180 || firstnum==360 || firstnum==45)
+            {
+                result=Math.tan(Math.toRadians(firstnum));
+                result=Math.round(result);
+            }else
+            {
+                result=Math.tan(Math.toRadians(firstnum));
+            }
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+            jTextFieldMem.setText(String.valueOf("tan " + firstnum));
         }
-        
-        else
-            result=Math.tan(Math.toRadians(firstnum));
-        
-        answer = String.valueOf(result);
-        jTextField1.setText(answer);
-        jTextFieldMem.setText(String.valueOf("tan " + firstnum));
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        if(checkEmpty())
+        {
+            
+        }else
+        {
             firstnum = Double.parseDouble(jTextField1.getText());
             String answer; 
             if(firstnum==180 || firstnum==360){
@@ -628,10 +650,16 @@ public class epistimoniki extends javax.swing.JFrame {
             answer = String.valueOf(result);
             jTextField1.setText(answer);
             jTextFieldMem.setText(String.valueOf("sin " + firstnum));
+        }
             
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        if(checkEmpty())
+        {
+            
+        }else
+        {
             firstnum = Double.parseDouble(jTextField1.getText());
             String answer; 
             if(firstnum==90 || firstnum==270){
@@ -643,6 +671,7 @@ public class epistimoniki extends javax.swing.JFrame {
             answer = String.valueOf(result);
             jTextField1.setText(answer);
             jTextFieldMem.setText(String.valueOf("cos " + firstnum));
+        }
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButtonOpenBrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpenBrActionPerformed
@@ -656,51 +685,102 @@ public class epistimoniki extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCloseBrActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        if(checkEmpty())
+        {
             
+        }else
+        {
             firstnum = Double.parseDouble(jTextField1.getText());
             String answer;
             result=factorial((int) firstnum);
             answer = String.valueOf(result);
             jTextField1.setText(answer);
             jTextFieldMem.setText(String.valueOf("!" + firstnum ));
+        }
         
         
     }//GEN-LAST:event_jButton30ActionPerformed
 
     private void jButtonDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivActionPerformed
-         firstnum = Double.parseDouble(jTextField1.getText());
-         jTextField1.setText("");
-         operations="/";
-         jTextFieldMem.setText(String.valueOf(firstnum + "/" ));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="/";
+            jTextFieldMem.setText(String.valueOf(firstnum + "/" ));
+        }
     }//GEN-LAST:event_jButtonDivActionPerformed
 
     private void jButtonMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMulActionPerformed
-         firstnum = Double.parseDouble(jTextField1.getText());
-         jTextField1.setText("");
-         operations="*";            
-         jTextFieldMem.setText(String.valueOf(firstnum + "*" ));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="*";            
+            jTextFieldMem.setText(String.valueOf(firstnum + "*" ));
+        }
     }//GEN-LAST:event_jButtonMulActionPerformed
 
     private void jButtonSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubActionPerformed
-         firstnum = Double.parseDouble(jTextField1.getText());
-         jTextField1.setText("");
-         operations="-";
-         jTextFieldMem.setText(String.valueOf(firstnum + "-" ));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="-";
+            jTextFieldMem.setText(String.valueOf(firstnum + "-" ));
+        }
     }//GEN-LAST:event_jButtonSubActionPerformed
 
     private void jButtonModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModActionPerformed
-       firstnum = Double.parseDouble(jTextField1.getText());
-       jTextField1.setText("");
-       operations="%";
-       jTextFieldMem.setText(String.valueOf(firstnum + "%" ));
+        if(checkEmpty())
+        {
+           
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="%";
+            jTextFieldMem.setText(String.valueOf(firstnum + "%" ));
+        }
     }//GEN-LAST:event_jButtonModActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
-        jTextFieldMem.setText(String.valueOf(firstnum + "^"));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            jTextField1.setText("");
+            operations="^";   
+            commaClick=0;
+            jTextFieldMem.setText(String.valueOf(firstnum + "^"));
+        }
+        
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        jTextFieldMem.setText(String.valueOf(firstnum + "^" + "2"));
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+            firstnum = Double.parseDouble(jTextField1.getText());
+            String answer;
+            result=Math.pow(firstnum,2);
+            answer = String.valueOf(result);
+            jTextField1.setText(answer);
+            jTextFieldMem.setText(String.valueOf(firstnum + "^" + "2"));
+        }
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
@@ -735,7 +815,13 @@ public class epistimoniki extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButtonEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualsActionPerformed
-        String answer;
+        if(checkEmpty())
+        {
+            
+        }else
+        {
+        
+            String answer;
             secondnum = Double.parseDouble(jTextField1.getText());   
            
             if (operations == "+")
@@ -744,35 +830,38 @@ public class epistimoniki extends javax.swing.JFrame {
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
                 jTextFieldMem.setText(String.valueOf(firstnum + "+" + secondnum));
-            }
-            if (operations == "-")
+            }else if (operations == "-")
             {
                result = firstnum - secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
                 jTextFieldMem.setText(String.valueOf(firstnum + "-" + secondnum));
-            }
-            if (operations == "*")
+            }else if (operations == "*")
             {
                 result = firstnum * secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
                 jTextFieldMem.setText(String.valueOf(firstnum + "*" + secondnum));
-            }
-            if (operations == "/")
+            }else if (operations == "/")
             {
                 result = firstnum / secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
                 jTextFieldMem.setText(String.valueOf(firstnum + "/" + secondnum));
-            }
-            if (operations == "%")
+            }else if (operations == "%")
             {
                 result = firstnum / secondnum;
                 answer = String.valueOf(result);
                 jTextField1.setText(answer);
                 jTextFieldMem.setText(String.valueOf(firstnum + "%" + secondnum));
-            }    
+            }else if(operations == "^")
+            {
+                result = Math.pow(firstnum , secondnum);
+                answer = String.valueOf(result);            
+                jTextField1.setText(answer);
+                jTextFieldMem.setText(String.valueOf(firstnum + "^" + secondnum));
+            }
+        }
     }//GEN-LAST:event_jButtonEqualsActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
