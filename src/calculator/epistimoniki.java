@@ -14,12 +14,10 @@ import calculator.mainForm;
  */
 public class epistimoniki extends javax.swing.JFrame {
     
-    double firstnum;
-    double secondnum;
-    double result;
+    public double firstnum,secondnum,result;
     String operations;
-    public int commaClick;
-   
+    public int commaClick2;
+    mainForm obj1 = new mainForm();
     
 
     public epistimoniki() {
@@ -518,6 +516,7 @@ public class epistimoniki extends javax.swing.JFrame {
             jTextField1.setText("");
             operations="+";
             jTextFieldMem.setText(String.valueOf(firstnum + "+" ));
+            commaClick2=0;
         }
     }//GEN-LAST:event_jButtonAddActionPerformed
 
@@ -710,7 +709,8 @@ public class epistimoniki extends javax.swing.JFrame {
             firstnum = Double.parseDouble(jTextField1.getText());
             jTextField1.setText("");
             operations="/";
-            jTextFieldMem.setText(String.valueOf(firstnum + "/" ));
+            jTextFieldMem.setText(String.valueOf(firstnum + "/" ));  
+            commaClick2=0;
         }
     }//GEN-LAST:event_jButtonDivActionPerformed
 
@@ -722,8 +722,9 @@ public class epistimoniki extends javax.swing.JFrame {
         {
             firstnum = Double.parseDouble(jTextField1.getText());
             jTextField1.setText("");
-            operations="*";            
+            operations="*";
             jTextFieldMem.setText(String.valueOf(firstnum + "*" ));
+            commaClick2=0;
         }
     }//GEN-LAST:event_jButtonMulActionPerformed
 
@@ -736,7 +737,8 @@ public class epistimoniki extends javax.swing.JFrame {
             firstnum = Double.parseDouble(jTextField1.getText());
             jTextField1.setText("");
             operations="-";
-            jTextFieldMem.setText(String.valueOf(firstnum + "-" ));
+            jTextFieldMem.setText(String.valueOf(firstnum + "-" ));  
+            commaClick2=0;
         }
     }//GEN-LAST:event_jButtonSubActionPerformed
 
@@ -762,7 +764,7 @@ public class epistimoniki extends javax.swing.JFrame {
             firstnum = Double.parseDouble(jTextField1.getText());
             jTextField1.setText("");
             operations="^";   
-            commaClick=0;
+            commaClick2=0;
             jTextFieldMem.setText(String.valueOf(firstnum + "^"));
         }
         
@@ -784,7 +786,8 @@ public class epistimoniki extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
-        jTextFieldMem.setText(String.valueOf("e " + firstnum));
+        jTextFieldMem.setText(String.valueOf("e"));
+        jTextField1.setText("2.71828183");
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -869,7 +872,8 @@ public class epistimoniki extends javax.swing.JFrame {
         jTextField1.setText("");
         firstnum=0;
         secondnum=0;
-        commaClick=0;
+        commaClick2=0;
+        jTextFieldMem.setText("");
     }//GEN-LAST:event_jButton23ActionPerformed
 
     private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
@@ -886,9 +890,9 @@ public class epistimoniki extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton24ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-       if(commaClick==0)
+       if(commaClick2==0)
         {
-            commaClick=1;
+            commaClick2=1;
             jTextField1.setText(jTextField1.getText()+".");
         }
     }//GEN-LAST:event_jButton11ActionPerformed
